@@ -1,31 +1,77 @@
-# 🛋️ Lovely Loveseats Receipt Generator
+#Catalog items
 
-This project was completed as part of a Codecademy Python course for a fictional furniture company called **Lovely Loveseats**. The goal was to build a simple receipt system to speed up the checkout process for customers.
+#Assigning lovely_loveseat_description variable
 
-## 📚 Project Summary
+lovely_loveseat_description = """Lovely Loveseat. Tufted polyester blend on wood. 32 inches high x 40 inches wide x 30 inches deep. Red or white."""
 
-Using foundational Python programming skills, I created a system that:
+#Assigning lovely_loveseat_price variable
 
-- Stores a catalog of furniture items with descriptions and prices
-- Tracks customer purchases and calculates totals
-- Applies sales tax to the final bill
-- Prints a formatted receipt with item details and total cost
+lovely_loveseat_price = 254.00
 
-## 🧠 How It Works
+#Assigning stylish_settee_description variable
 
-1. **Catalog Setup**  
-   I created variables to store information about the furniture catalog, including item descriptions and prices.
+stylish_settee_description = """Stylish Settee. Faux leather on birch. 29.50 inches high x 54.75 inches wide x 28 inches deep. Black."""
 
-2. **Customer Purchase Tracking**  
-   - `customer_one_total`: Initialized at `0`, this variable increases with each purchase using the `+=` operator.
-   - `customer_one_itemization`: Starts as an empty string and accumulates item descriptions as purchases are made.
+#Assigning stylish_settee_price variable
 
-3. **Tax Calculation**  
-   - A `sales_tax` variable is set to `0.088`.
-   - Tax is calculated using basic arithmetic and added to the total cost.
+stylish_settee_price = 180.50
 
-4. **Receipt Printing**  
-   - The `print()` function displays the item descriptions and total cost.
-   - The total is formatted to two decimal places using `"{:.2f}".format()` for currency display.
+#Assiigning luxurious_lamp_description variable
 
-## 🧾 Sample Output
+luxurious_lamp_description = "Luxurious Lamp. Glass and iron. 36 inches tall. Brown with cream shade."
+
+#Assigning luxurious_lamp_price variable
+
+luxurious_lamp_price = 52.15
+
+#Assigning sales_tax variable
+
+sales_tax = .088
+
+#Customer purchase
+
+#Assigning customer_one_total variable
+
+customer_one_total = 0
+
+#Assigning customer_one_itemization variable
+
+customer_one_itemization = ""
+
+#Adding first customer purchase to customer_one_total variable
+
+customer_one_total += lovely_loveseat_price
+
+#Adding description of lovely loveseat to customer_one_itemization variable
+
+customer_one_itemization += lovely_loveseat_description
+
+#Adding price of luxurious lamp to customer one's total
+
+customer_one_total += luxurious_lamp_price
+
+#Adding description of luxurious lamp to customer itemization
+
+customer_one_itemization += luxurious_lamp_description
+
+#Calculations
+
+#Assigning customer_one_tax variable
+
+customer_one_tax = customer_one_total * sales_tax
+
+#Total amount to be paid by customer one
+
+customer_one_total += customer_one_tax
+
+#Printing receipts
+
+#Printing the customer's receipt
+
+print("Customer One Items:")
+
+print(customer_one_itemization)
+
+print("Customer One Total:")
+
+print("$""{:.2f}".format(customer_one_total))
